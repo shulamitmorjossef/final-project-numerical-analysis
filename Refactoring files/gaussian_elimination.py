@@ -1,6 +1,13 @@
 import numpy as np
 from colors import bcolors
-from matrix_utility import swap_row
+
+#  swapping between row i to row j in the matrix
+def swap_row(mat, i, j):
+    N = len(mat)
+    for k in range(N + 1):
+        temp = mat[i][k]
+        mat[i][k] = mat[j][k]
+        mat[j][k] = temp
 
 
 def gaussianElimination(mat):
